@@ -7,7 +7,6 @@
   background-color: white;
   z-index: 99;
   top: 0;
-  font-size: 15px;
   font-weight: 700;
   font-family: SFPro, Arial, NotoSansJP_r, NotoSansKR_r, sans-serif;
 }
@@ -17,17 +16,23 @@
 }
 
 .navContent {
-  padding: 10px 20px;
+  padding: 10px 25px;
   display: flex;
   justify-content: space-around;
   width: 40%;
 }
 
 .active {
+  padding-bottom: 5px;
   border-bottom: 4px solid black;
 }
 
 .language {
-  padding-right: 20px;
+  margin-right: 20px;
   display: flex;
+  align-items: center;
+}
+
+.language:hover {
+  cursor: pointer;
 }
