@@ -1,0 +1,32 @@
+.home {
+  position: relative;
+}
+
+.bgImage {
+  height: 100vh;
+  width: 100vw;
+}
+
+.homeContent {
+  position: absolute;
+  top: 20%;
+  right: 50%;
+  color: white;
+  font-size: 40px;
+}
+
+.downloadText {
+  display: flex;
+  margin-top: 40px;
+  font-size: 15px;
+  align-items: center;
+}
+
+.downloadText > span {
+  margin-left: 10px;
+}
+
+.downloadContainers {
+  display: flex;
+  justify-content: flex-start;
+}
