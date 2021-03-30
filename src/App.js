@@ -4,6 +4,7 @@ import { Switch, Route, useLocation } from "react-router-dom";
 import "./App.css";
 
 import HomePage from "./pages/home/home.page";
+import MessengerAppPage from "./pages/messenger-app/messenger-app.page";
 
 import Navbar from "./components/navbar/navbar.component";
 
@@ -20,7 +21,8 @@ function App() {
     <div className="App">
       <Navbar selected={selected} />
       <Switch>
-        <Route path="/" component={HomePage} />
+        <Route exact path="/" component={HomePage} />
+        <Route path="/messages" component={MessengerAppPage} />
       </Switch>
     </div>
   );

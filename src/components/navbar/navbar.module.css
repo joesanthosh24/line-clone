@@ -9,6 +9,7 @@
   top: 0;
   font-weight: 700;
   font-family: SFPro, Arial, NotoSansJP_r, NotoSansKR_r, sans-serif;
+  border-bottom: 1px solid lightgrey;
 }
 
 .homeText {
