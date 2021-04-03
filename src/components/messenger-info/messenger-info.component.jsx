@@ -1,34 +1,24 @@
 import classes from "./messenger-info.module.css";
 
-import texts from "../../assets/images/texts.png";
+import { messengerData } from "../../data/messenger-app.data";
 
 const MessengerInfo = () => {
+  const indexArr = Object.keys(messengerData);
+
+  console.log(messengerData[2].img);
+
   return (
     <div className={classes.infoCards}>
-      <div className={classes.infoCard}>
-        <img src={texts} />
-        <h3>Texts, Voice & Video Calls</h3>
-        <p>
-          You can send one-on-one and group texts, and use international voice
-          and video calls with your friends.
-        </p>
-      </div>
-      <div className={classes.infoCard}>
-        <img src={texts} />
-        <h3>Texts, Voice & Video Calls</h3>
-        <p>
-          You can send one-on-one and group texts, and use international voice
-          and video calls with your friends.
-        </p>
-      </div>
-      <div className={classes.infoCard}>
-        <img src={texts} />
-        <h3>Texts, Voice & Video Calls</h3>
-        <p>
-          You can send one-on-one and group texts, and use international voice
-          and video calls with your friends.
-        </p>
-      </div>
+      {indexArr.map((indx) => (
+        <div key={indx} className={classes.infoCard}>
+          <img
+            src={messengerData[indx].img}
+            alt={messengerData[indx].title.en}
+          />
+          <h3>{messengerData[indx].title.en}</h3>
+          <p>{messengerData[indx].subtitle.en}</p>
+        </div>
+      ))}
     </div>
   );
 };
