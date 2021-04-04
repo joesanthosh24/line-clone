@@ -1,16 +1,19 @@
+import { useSelector } from "react-redux";
+
 import classes from "./messenger-app.module.css";
 
 import MessengerInfo from "../../components/messenger-info/messenger-info.component";
 
+import { selectHeadingData } from "../../features/messenger-data/messengerDataSlice";
+
 const MessengerAppPage = () => {
+  const headingData = useSelector(selectHeadingData);
+
   return (
     <div className={classes.messengerApp}>
       <div className={classes.header}>
-        <h1>Messenger APP</h1>
-        <p>
-          New communication app which allows you to make FREE voice calls and
-          send FREE messages whenever and wherever you are, 24 hours a day!
-        </p>
+        <h1>{headingData.title.en}</h1>
+        <p>{headingData.description.en}</p>
       </div>
       <MessengerInfo />
     </div>

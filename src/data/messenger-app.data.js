@@ -60,3 +60,13 @@ export const messengerData = {
     img: "/images/wallet.png",
   },
 };
+
+export const messengerAppInfo = {
+  title: {
+    en: "Messenger App",
+  },
+  description: {
+    en:
+      "New communication app which allows you to make FREE voice calls and send FREE messages whenever and wherever you are, 24 hours a day!",
+  },
+};
