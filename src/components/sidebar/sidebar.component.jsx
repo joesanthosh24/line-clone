@@ -8,23 +8,28 @@ import {
   chooseCategory,
 } from "../../features/services/serviceSlice";
 
+import SidebarItem from "../sidebar-item/sidebar-item.component";
+
 const Sidebar = () => {
   const categories = useSelector(selectAllCategories);
   const dispatch = useDispatch();
-  const [category, setCategory] = useState("products");
+  const [chosenCategory, setChosenCategory] = useState("products");
 
   useEffect(() => {
-    dispatch(chooseCategory(category));
-  }, [category, dispatch]);
+    dispatch(chooseCategory(chosenCategory));
+  }, [chosenCategory, dispatch]);
 
   const categoriesArray = Object.keys(categories);
 
   return (
     <div className={classes.sidebar}>
       {categoriesArray.map((category) => (
-        <p onClick={() => setCategory(category)} key={category}>
-          {categories[category].en}
-        </p>
+        <SidebarItem
+          key={category}
+          chooseItem={setChosenCategory}
+          category={category}
+          chosenCategory={chosenCategory}
+        />
       ))}
     </div>
   );
