@@ -10,3 +10,19 @@ a {
 a:hover {
   cursor: pointer;
 }
+
+.header {
+  width: 50%;
+}
+
+.header > h1 {
+  font-size: 60px;
+  font-weight: 800;
+  color: rgb(28, 27, 27);
+}
+
+.header > p {
+  color: #616161;
+  text-align: center;
+  font-size: 25px;
+}

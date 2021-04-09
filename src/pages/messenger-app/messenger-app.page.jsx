@@ -11,7 +11,7 @@ const MessengerAppPage = () => {
 
   return (
     <div className={classes.messengerApp}>
-      <div className={classes.header}>
+      <div className="header">
         <h1>{headingData.title.en}</h1>
         <p>{headingData.description.en}</p>
       </div>
