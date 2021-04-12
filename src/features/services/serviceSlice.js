@@ -34,5 +34,7 @@ export const servicesSlice = createSlice({
 export const { chooseCategory } = servicesSlice.actions;
 
 export const selectAllCategories = (state) => state.services.categories;
+export const selectChosenServiceItems = (state) =>
+  state.services.chosenServiceItems;
 
 export default servicesSlice.reducer;
