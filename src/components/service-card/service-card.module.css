@@ -1,0 +1,90 @@
+.serviceItem {
+  height: 340px;
+  width: 270px;
+  border: 2px solid lavender;
+  border-radius: 20px;
+  position: relative;
+  margin-right: 80px;
+  margin-bottom: 80px;
+  transition: all 0.3s;
+}
+
+.serviceItem:hover {
+  transform: translateY(-2px) scale(1.2);
+  background-color: #07b53b;
+  border-color: #07b53b;
+  color: #fff;
+  cursor: pointer;
+}
+
+.serviceItem > img {
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+
+.serviceItemContent {
+  margin-top: 130px;
+  position: absolute;
+  left: 30px;
+  text-align: left;
+}
+
+.iconContainer {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  color: gray;
+}
+
+.serviceItem:hover .iconContainer {
+  color: white;
+}
+
+.serviceItem:hover img {
+  border-color: #47d070;
+}
+
+@media screen and (max-width: 1215px) {
+  .serviceItem {
+    position: inherit;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 0;
+    margin-bottom: 10px;
+    height: 80px;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  .serviceItem > img {
+    position: inherit;
+    height: 40px;
+    width: 40px;
+  }
+  .serviceItemContent {
+    position: inherit;
+    flex: 1;
+    margin-top: 0;
+    margin-left: 20px;
+  }
+  .iconContainer {
+    visibility: hidden;
+  }
+  .serviceItem:hover {
+    cursor: pointer;
+    transform: none;
+    background-color: #fff;
+    color: #000;
+    border-color: rgba(0, 0, 0, 0.05);
+  }
+  .serviceItem:hover img {
+    border-color: lightgrey;
+  }
+}

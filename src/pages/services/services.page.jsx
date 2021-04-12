@@ -5,6 +5,7 @@ import classes from "./services.module.css";
 import { selectChosenServiceItems } from "../../features/services/serviceSlice";
 
 import Sidebar from "../../components/sidebar/sidebar.component";
+import ServiceCard from "../../components/service-card/service-card.component";
 
 const ServicesPage = () => {
   const chosenItems = useSelector(selectChosenServiceItems);
@@ -20,13 +21,12 @@ const ServicesPage = () => {
         <Sidebar />
         <div className={classes.serviceItems}>
           {chosenItems.map(({ title, description, imageSrc }) => (
-            <div key={title.en} className={classes.serviceItem}>
-              <img src={imageSrc} alt={title.en} />
-              <div className={classes.serviceItemContent}>
-                <h4>{title.en}</h4>
-                <p>{description.en}</p>
-              </div>
-            </div>
+            <ServiceCard
+              key={title.en}
+              title={title.en}
+              description={description.en}
+              imageSrc={imageSrc}
+            />
           ))}
         </div>
       </div>
