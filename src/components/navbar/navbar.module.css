@@ -37,3 +37,57 @@
 .language:hover {
   cursor: pointer;
 }
+
+.navContentDropDown {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .navbar {
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0;
+    position: relative;
+  }
+  .navbar p {
+    color: #000;
+    border-color: white;
+  }
+  .navContent {
+    display: none;
+  }
+  .navContentDropDown {
+    display: block;
+    background-color: #fff;
+    border-top: 1px solid #23bf52;
+  }
+  .navContentDropDown > a {
+    display: block;
+    padding: 25px;
+    padding-left: 65px;
+    border-bottom: 1px solid lightblue;
+  }
+  .homeText {
+    margin-left: 30px;
+    padding-left: 0;
+  }
+  .language {
+    display: none;
+  }
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 20%;
+    padding: 7px;
+  }
+  .line {
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    flex: 1;
+    margin: 3px;
+  }
+}

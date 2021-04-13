@@ -13,3 +13,15 @@
   background-color: #07b53b;
   border-color: #07b53b;
 }
+
+@media screen and (max-width: 1215px) {
+  .sidebarItem {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .sidebarItem {
+    font-size: 8px;
+  }
+}
