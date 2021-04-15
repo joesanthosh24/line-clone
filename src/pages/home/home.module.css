@@ -35,3 +35,34 @@
   display: flex;
   justify-content: flex-start;
 }
+
+@media screen and (max-width: 1290px) {
+  .homeContent {
+    margin: 10px 20px;
+    position: fixed;
+    right: 20px;
+    width: 650px;
+    top: 250px;
+  }
+  .homeContent > h1 {
+    font-size: 40px;
+  }
+  .homeContent > p {
+    font-size: 25px;
+  }
+  .downloadText {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .homeContent {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .homeContent {
+    width: 300px;
+  }
+}

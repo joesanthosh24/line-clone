@@ -15,7 +15,7 @@ const HomePage = () => {
       <img src={background} alt="Line Background" className={classes.bgImage} />
       <div className={classes.homeContent}>
         <h1>Life on LINE</h1>
-        <p>Line--always at your side</p>
+        <p>Line - always at your side</p>
         <span className={classes.downloadText}>
           <img src={line} alt="Line Chat Logo White" />
           <span>Download</span>
