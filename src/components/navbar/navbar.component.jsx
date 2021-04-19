@@ -5,7 +5,9 @@ import LanguageIcon from "@material-ui/icons/Language";
 
 import classes from "./navbar.module.css";
 
-const Navbar = ({ selected }) => {
+import { textResource } from "../../data/text_resource";
+
+const Navbar = ({ selected, lang }) => {
   const [dropDownOpen, setDropDownOpen] = useState(false);
 
   useEffect(() => {
@@ -26,12 +28,12 @@ const Navbar = ({ selected }) => {
           </Link>
           <Link to="/messages">
             <p className={selected === "/messages" && classes.active}>
-              Messenger App
+              {textResource.messenger_title[lang]}
             </p>
           </Link>
           <Link to="/services">
             <p className={selected === "/services" && classes.active}>
-              Services
+              {textResource.services_title[lang]}
             </p>
           </Link>
         </div>

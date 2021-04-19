@@ -3,11 +3,14 @@ import { useSelector } from "react-redux";
 import classes from "./messenger-info.module.css";
 
 import { selectAllData } from "../../features/messenger-data/messengerDataSlice";
+import { selectCurrentLanguage } from "../../features/language/languageSlice";
 
 import InfoCard from "../info-card/info-card.component";
 
 const MessengerInfo = () => {
+  const currentLanguage = useSelector(selectCurrentLanguage);
   const messengerData = useSelector(selectAllData);
+
   const indexArr = Object.keys(messengerData);
 
   return (
@@ -24,9 +27,9 @@ const MessengerInfo = () => {
         <InfoCard
           key={indx}
           imageSrc={messengerData[indx].img}
-          imageAlt={messengerData[indx].title.en}
-          title={messengerData[indx].title.en}
-          subtitle={messengerData[indx].title.en}
+          imageAlt={messengerData[indx].title[currentLanguage]}
+          title={messengerData[indx].title[currentLanguage]}
+          subtitle={messengerData[indx].subtitle[currentLanguage]}
         />
       ))}
     </div>

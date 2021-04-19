@@ -12,6 +12,7 @@ import SidebarItem from "../sidebar-item/sidebar-item.component";
 
 const Sidebar = () => {
   const categories = useSelector(selectAllCategories);
+
   const dispatch = useDispatch();
   const [chosenCategory, setChosenCategory] = useState("products");
 
