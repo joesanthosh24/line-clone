@@ -5,10 +5,13 @@ import LanguageIcon from "@material-ui/icons/Language";
 
 import classes from "./navbar.module.css";
 
+import LanguageSelect from "../language-select/language-select.component";
+
 import { textResource } from "../../data/text_resource";
 
 const Navbar = ({ selected, lang }) => {
   const [dropDownOpen, setDropDownOpen] = useState(false);
+  const [languageSelectorOpen, setLanguageSelectorOpen] = useState(false);
 
   useEffect(() => {
     setDropDownOpen(false);
@@ -37,7 +40,10 @@ const Navbar = ({ selected, lang }) => {
             </p>
           </Link>
         </div>
-        <div className={classes.language}>
+        <div
+          onClick={() => setLanguageSelectorOpen(!languageSelectorOpen)}
+          className={classes.language}
+        >
           <LanguageIcon />
           <p>EN</p>
           <ArrowDropDownIcon />
@@ -51,16 +57,17 @@ const Navbar = ({ selected, lang }) => {
           <div className={classes.line}></div>
         </div>
       </div>
+      {languageSelectorOpen && <LanguageSelect />}
       {dropDownOpen && (
         <div className={classes.navContentDropDown}>
           <Link to="/">
             <p>Life on Line</p>
           </Link>
           <Link to="/messages">
-            <p>Messenger App</p>
+            <p>{textResource.messenger_title[lang]}</p>
           </Link>
           <Link to="/services">
-            <p>Services</p>
+            <p>{textResource.services_title[lang]}</p>
           </Link>
         </div>
       )}

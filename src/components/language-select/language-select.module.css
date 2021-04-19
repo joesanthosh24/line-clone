@@ -1,0 +1,14 @@
+.languageSelect {
+  width: 90px;
+  height: auto;
+  color: gray;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.languageSelect p {
+  display: inline-block i !important;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
